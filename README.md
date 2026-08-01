@@ -187,12 +187,12 @@ AI 对话中，历史消息越长，Token 消耗越大。爱魔豆的压缩引�
 
 <br>
 
-| 方案             |    月费    | API Key 数 | 自定义分类 | Token 压缩 | 局域网访问 | 适合谁         |
-| :--------------- | :--------: | :--------: | :--------: | :--------: | :--------: | :------------- |
-| 🆓 **Free**       |   **¥0**   |    1 个    |     ❌      |     ❌      |     ❌      | 先试试看       |
-| 🥉 **Lite**       | **¥0.99**  |    3 个    |     ❌      |     ❌      |     ❌      | 个人轻度使用   |
-| 🥈 **Pro** 🔥      | **¥9.99**  |   10 个    |     ❌      |     ✅      |     ❌      | **开发者首选** |
-| 🥇 **Enterprise** | **¥99.99** |   无上限   |  ✅ 无上限  |     ✅      |     ✅      | 团队/企业      |
+| 方案             |       月费        | API Key 数 | 模型总数 | 自定义分类 | Token 压缩 | 局域网访问 | 适合谁             |
+| :--------------- | :---------------: | :--------: | :------: | :--------: | :--------: | :--------: | :----------------- |
+| 🆓 **Free**       |      **¥0**       |    1 个    |   3 个   |     ❌      |     ❌      |     ❌      | 先试试看           |
+| 🥉 **Trial**      | **¥0**（7天试用） |   10 个    |  10 个   |     ❌      |     ✅      |     ❌      | 体验个人版全部功能 |
+| 🥈 **Pro** 🔥      |     **¥9.99**     |   10 个    |  10 个   |     ❌      |     ✅      |     ❌      | **开发者首选**     |
+| 🥇 **Enterprise** |    **¥99.99**     |   无上限   |  无上限  |  ✅ 无上限  |     ✅      |     ✅      | 团队/企业          |
 
 > 💳 支持 **支付宝 / 微信 / 抖音** 支付，一键订阅，随时升级。
 
@@ -238,22 +238,33 @@ AI 对话中，历史消息越长，Token 消耗越大。爱魔豆的压缩引�
 
 <br>
 
-### 一键安装
+### 一键安装 — 免费版
 
-| 平台                        | 下载链接                                                     | 大小  |
-| :-------------------------- | :----------------------------------------------------------- | :---: |
-| 🍎 **macOS (Intel)**         | [下载 iModel-x64](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.0-macOS-x64.pkg)  | ~21MB |
-| 🍎 **macOS (Apple Silicon)** | [下载 iModel-arm64](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.0-macOS-arm64.pkg) | ~17MB |
-| 🪟 **Windows**(X64)          | [下载 iModel-x64](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.0-windows-x64-setup.exe) | ~22MB |
-| 🪟 **Windows**(Arm64)        | [下载 iModel-arm64](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.0-windows-arm64-setup.exe) | ~18MB |
-| 🐧 **Linux**                 | [下载 iModel-x64](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.0-linux-x64.tar.gz) | ~32MB |
+| 平台          | 架构                | 下载链接                                                     |  大小  | 系统要求                  |
+| :------------ | :------------------ | :----------------------------------------------------------- | :----: | :------------------------ |
+| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-2.0.5-macOS-arm64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.5-macOS-arm64.pkg) | ~17 MB | macOS 13.x 或更高版本     |
+| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-2.0.5-macOS-x64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.5-macOS-x64.pkg) | ~21 MB | macOS 13.x 或更高版本     |
+| 🪟 **Windows** | X64                 | [下载 iModel-2.0.5-windows-x64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.5-windows-x64-setup.exe) | ~22 MB | Windows 10/11             |
+| 🪟 **Windows** | ARM                 | [下载 iModel-2.0.5-windows-arm64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.5-windows-arm64-setup.exe) | ~18 MB | Windows 11 ARM            |
+| 🐧 **Linux**   | X64                 | [下载 iModel-2.0.5-linux-x64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.5-linux-x64.tar.gz) | ~32 MB | Ubuntu 20.04+ / CentOS 7+ |
+| 🐧 **Linux**   | ARM64               | [下载 iModel-2.0.5-linux-arm64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.5-linux-arm64.tar.gz) | ~27 MB | Ubuntu 24.04 或更高版本   |
 
-### 5 步上手
+### 一键安装 — Pro 版
+
+> ⚠️ Pro 版桌面客户端目前仅支持以下平台，其他平台可继续使用免费版。
+
+| 平台          | 架构                | 下载链接                                                     |  大小   | 系统要求              |
+| :------------ | :------------------ | :----------------------------------------------------------- | :-----: | :-------------------- |
+| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-Pro-2.0.5-macOS-arm64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.5-macOS-arm64.pkg) | ~361 MB | macOS 13.x 或更高版本 |
+| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-Pro-2.0.5-macOS-x64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.5-macOS-x64.pkg) | ~247 MB | macOS 13.x 或更高版本 |
+| 🪟 **Windows** | X64                 | [下载 iModel-Pro-2.0.5-windows-x64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.5-windows-x64-setup.exe) | ~267 MB | Windows 10/11         |
+
+### 3 步上手
 
 ```
-1 下载安装 → 2 手机号/验证码、用户名/密码登录 → 3 启动服务 → 4 配置你购买的Provider信息 → 5 添加令牌 → 开始使用
+1️⃣ 下载安装 →  2️⃣ 手机号登录 →  3️⃣ 启动服务 → 开始使用
 
-总耗时：不超过 5 分钟
+总耗时：不超过 1 分钟
 ```
 
 **然后就可以在你的 AI 工具中使用了：**
@@ -289,13 +300,13 @@ AI 对话中，历史消息越长，Token 消耗越大。爱魔豆的压缩引�
 A：不会。所有请求数据都存储在你的本地电脑上，爱魔豆只做智能路由和压缩，不收集、不上传你的对话内容。
 
 **Q：支持哪些模型供应商？**
-A：支持 Anthropic Claude（Flash/Pro）系列和 OpenAI GPT 系列，更多模型持续接入中。
+A：支持 OpenAI Chat Completions 和 Anthropic Messages 两种主流协议。兼容 Claude Code、Claude Desktop、OpenAI API 客户端，以及任何支持这两种协议的 AI 工具。更多模型持续接入中。
 
 **Q：安装后对现有工具有影响吗？**
 A：完全没有。只需将 API 地址改为 `http://127.0.0.1:8788/v1`，现有代码和工具无需任何改动。
 
 **Q：免费版和付费版有什么区别？**
-A：免费版可体验核心路由功能，有 1 个 API Key 额度。Pro 版解锁 Token 压缩、更多 API Key 等高级功能。
+A：免费版可体验核心路由功能，有 1 个 API Key 额度、3 个模型上限。Pro 版（¥9.99/月）解锁 Token 压缩、最多 10 个 API Key 和 10 个模型等高级功能。企业版（¥99.99/月）提供无上限的 API Key、模型和自定义分类路由，支持局域网分发。
 
 **Q：可以按月订阅吗？可以随时取消吗？**
 A：可以。按月订阅，随时取消，不扣违约金。
@@ -322,7 +333,7 @@ A：可以。按月订阅，随时取消，不扣违约金。
 
 <br>
 
-*版本 2.0.0 · 支持 macOS / Windows / Linux*
+*版本 2.0.5 · 支持 macOS / Windows / Linux*
 *如有任何问题，请发送邮件至 support@imodel.work*
 
 <br>
