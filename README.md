@@ -242,22 +242,24 @@ AI 对话中，历史消息越长，Token 消耗越大。爱魔豆的压缩引�
 
 | 平台          | 架构                | 下载链接                                                     |  大小  | 系统要求                  |
 | :------------ | :------------------ | :----------------------------------------------------------- | :----: | :------------------------ |
-| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-2.0.5-macOS-arm64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.5-macOS-arm64.pkg) | ~17 MB | macOS 13.x 或更高版本     |
-| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-2.0.5-macOS-x64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.5-macOS-x64.pkg) | ~21 MB | macOS 13.x 或更高版本     |
-| 🪟 **Windows** | X64                 | [下载 iModel-2.0.5-windows-x64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.5-windows-x64-setup.exe) | ~22 MB | Windows 10/11             |
-| 🪟 **Windows** | ARM                 | [下载 iModel-2.0.5-windows-arm64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.5-windows-arm64-setup.exe) | ~18 MB | Windows 11 ARM            |
-| 🐧 **Linux**   | X64                 | [下载 iModel-2.0.5-linux-x64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.5-linux-x64.tar.gz) | ~32 MB | Ubuntu 20.04+ / CentOS 7+ |
-| 🐧 **Linux**   | ARM64               | [下载 iModel-2.0.5-linux-arm64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.5-linux-arm64.tar.gz) | ~27 MB | Ubuntu 24.04 或更高版本   |
+| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-2.0.10-macOS-arm64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.10-macOS-arm64.pkg) | ~17 MB | macOS 13.x 或更高版本     |
+| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-2.0.10-macOS-x64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.10-macOS-x64.pkg) | ~21 MB | macOS 13.x 或更高版本     |
+| 🪟 **Windows** | X64                 | [下载 iModel-2.0.10-windows-x64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.10-windows-x64-setup.exe) | ~18 MB | Windows 10/11             |
+| 🪟 **Windows** | ARM                 | [下载 iModel-2.0.10-windows-arm64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.10-windows-arm64-setup.exe) | ~18 MB | Windows 10/11             |
+| 🐧 **Linux**   | X64                 | [下载 iModel-2.0.11-linux-x64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.11-linux-x64.tar.gz) | ~32 MB | Ubuntu 20.04+ / CentOS 7+ |
+| 🐧 **Linux**   | ARM64               | [下载 iModel-2.0.11-linux-arm64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.11-linux-arm64.tar.gz) | ~28 MB | Ubuntu 24.04 或更高版本   |
 
 ### 一键安装 — Pro 版
 
-> ⚠️ Pro 版桌面客户端目前仅支持以下平台，其他平台可继续使用免费版。
+> ⚠️ Pro 版桌面客户端目前支持 Windows X64、macOS、Linux 平台，**暂不支持 Windows ARM**，Windows ARM 用户可继续使用免费版。
 
-| 平台          | 架构                | 下载链接                                                     |  大小   | 系统要求              |
-| :------------ | :------------------ | :----------------------------------------------------------- | :-----: | :-------------------- |
-| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-Pro-2.0.5-macOS-arm64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.5-macOS-arm64.pkg) | ~361 MB | macOS 13.x 或更高版本 |
-| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-Pro-2.0.5-macOS-x64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.5-macOS-x64.pkg) | ~247 MB | macOS 13.x 或更高版本 |
-| 🪟 **Windows** | X64                 | [下载 iModel-Pro-2.0.5-windows-x64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.5-windows-x64-setup.exe) | ~267 MB | Windows 10/11         |
+| 平台          | 架构                | 下载链接                                                     |  大小   | 系统要求                  |
+| :------------ | :------------------ | :----------------------------------------------------------- | :-----: | :------------------------ |
+| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-Pro-2.0.10-macOS-arm64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.10-macOS-arm64.pkg) | ~234 MB | macOS 13.x 或更高版本     |
+| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-Pro-2.0.10-macOS-x64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.10-macOS-x64.pkg) | ~130 MB | macOS 13.x 或更高版本     |
+| 🪟 **Windows** | X64                 | [下载 iModel-Pro-2.0.10-windows-x64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.10-windows-x64-setup.exe) | ~175 MB | Windows 10/11             |
+| 🐧 **Linux**   | X64                 | [下载 iModel-Pro-2.0.11-linux-x64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.11-linux-x64.tar.gz) | ~337 MB | Ubuntu 20.04+ / CentOS 7+ |
+| 🐧 **Linux**   | ARM64               | [下载 iModel-Pro-2.0.11-linux-arm64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.11-linux-arm64.tar.gz) | ~297 MB | Ubuntu 24.04 或更高版本   |
 
 ### 3 步上手
 
@@ -333,7 +335,7 @@ A：可以。按月订阅，随时取消，不扣违约金。
 
 <br>
 
-*版本 2.0.5 · 支持 macOS / Windows / Linux*
+*版本 2.0.10/2.0.11 · 支持 macOS / Windows / Linux*
 *如有任何问题，请发送邮件至 support@imodel.work*
 
 <br>
