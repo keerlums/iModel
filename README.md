@@ -345,12 +345,12 @@ IMODEL_AGENT_ID=my-agent imodel-cli --json token create openai --name "My Agent"
 
 | 平台          | 架构                | 下载链接                                                     |  大小  | 系统要求                  |
 | :------------ | :------------------ | :----------------------------------------------------------- | :----: | :------------------------ |
-| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-2.0.35-macOS-arm64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-2.0.35-macOS-arm64.pkg) | ~22 MB | macOS 13.x 或更高版本     |
-| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-2.0.35-macOS-x64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-2.0.35-macOS-x64.pkg) | ~36 MB | macOS 13.x 或更高版本     |
-| 🪟 **Windows** | X64                 | [下载 iModel-2.0.35-windows-x64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-2.0.35-windows-x64-setup.exe) | ~19 MB | Windows 10/11             |
-| 🪟 **Windows** | ARM                 | [下载 iModel-2.0.35-windows-arm64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-2.0.35-windows-arm64-setup.exe) | ~18 MB | Windows 10/11             |
-| 🐧 **Linux**   | X64                 | [下载 iModel-2.0.35-linux-x64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-2.0.35-linux-x64.tar.gz) | ~36 MB | Ubuntu 20.04+ / CentOS 7+ |
-| 🐧 **Linux**   | ARM64               | [下载 iModel-2.0.35-linux-arm64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-2.0.35-linux-arm64.tar.gz) | ~35 MB | Ubuntu 24.04 或更高版本   |
+| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-2.0.35-macOS-arm64.pkg](https://github.com/sztechnexus/iModel/releases/download/v2.0.35/iModel-2.0.35-macOS-arm64.pkg) | ~22 MB | macOS 13.x 或更高版本     |
+| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-2.0.35-macOS-x64.pkg](https://github.com/sztechnexus/iModel/releases/download/v2.0.35/iModel-2.0.35-macOS-x64.pkg) | ~36 MB | macOS 13.x 或更高版本     |
+| 🪟 **Windows** | X64                 | [下载 iModel-2.0.35-windows-x64-setup.exe](https://github.com/sztechnexus/iModel/releases/download/v2.0.35/iModel-2.0.35-windows-x64-setup.exe) | ~19 MB | Windows 10/11             |
+| 🪟 **Windows** | ARM                 | [下载 iModel-2.0.35-windows-arm64-setup.exe](https://github.com/sztechnexus/iModel/releases/download/v2.0.35/iModel-2.0.35-windows-arm64-setup.exe) | ~18 MB | Windows 10/11             |
+| 🐧 **Linux**   | X64                 | [下载 iModel-2.0.35-linux-x64.tar.gz](https://github.com/sztechnexus/iModel/releases/download/v2.0.35/iModel-2.0.35-linux-x64.tar.gz) | ~36 MB | Ubuntu 20.04+ / CentOS 7+ |
+| 🐧 **Linux**   | ARM64               | [下载 iModel-2.0.35-linux-arm64.tar.gz](https://github.com/sztechnexus/iModel/releases/download/v2.0.35/iModel-2.0.35-linux-arm64.tar.gz) | ~35 MB | Ubuntu 24.04 或更高版本   |
 
 ### 一键安装 — Pro 版
 
@@ -358,11 +358,11 @@ IMODEL_AGENT_ID=my-agent imodel-cli --json token create openai --name "My Agent"
 
 | 平台          | 架构                | 下载链接                                                     |  大小   | 系统要求                  |
 | :------------ | :------------------ | :----------------------------------------------------------- | :-----: | :------------------------ |
-| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-Pro-2.0.35-macOS-arm64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-macOS-arm64.pkg) | ~271 MB | macOS 13.x 或更高版本     |
-| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-Pro-2.0.35-macOS-x64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-macOS-x64.pkg) | ~163 MB | macOS 13.x 或更高版本     |
-| 🪟 **Windows** | X64                 | [下载 iModel-Pro-2.0.35-windows-x64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-windows-x64-setup.exe) | ~196 MB | Windows 10/11             |
-| 🐧 **Linux**   | X64                 | [下载 iModel-Pro-2.0.35-linux-x64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-linux-x64.tar.gz) | ~372 MB | Ubuntu 20.04+ / CentOS 7+ |
-| 🐧 **Linux**   | ARM64               | [下载 iModel-Pro-2.0.35-linux-arm64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-linux-arm64.tar.gz) | ~330 MB | Ubuntu 24.04 或更高版本   |
+| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-Pro-2.0.35-macOS-arm64.pkg](https://github.com/sztechnexus/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-macOS-arm64.pkg) | ~271 MB | macOS 13.x 或更高版本     |
+| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-Pro-2.0.35-macOS-x64.pkg](https://github.com/sztechnexus/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-macOS-x64.pkg) | ~163 MB | macOS 13.x 或更高版本     |
+| 🪟 **Windows** | X64                 | [下载 iModel-Pro-2.0.35-windows-x64-setup.exe](https://github.com/sztechnexus/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-windows-x64-setup.exe) | ~196 MB | Windows 10/11             |
+| 🐧 **Linux**   | X64                 | [下载 iModel-Pro-2.0.35-linux-x64.tar.gz](https://github.com/sztechnexus/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-linux-x64.tar.gz) | ~372 MB | Ubuntu 20.04+ / CentOS 7+ |
+| 🐧 **Linux**   | ARM64               | [下载 iModel-Pro-2.0.35-linux-arm64.tar.gz](https://github.com/sztechnexus/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-linux-arm64.tar.gz) | ~330 MB | Ubuntu 24.04 或更高版本   |
 
 ### 3 步上手
 
