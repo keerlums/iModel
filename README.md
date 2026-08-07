@@ -161,6 +161,109 @@ AI 对话中，历史消息越长，Token 消耗越大。爱魔豆的压缩引�
 
 <br>
 
+### 💻 CLI · 命令行一键接入
+
+> **imodel-cli** 是 iModel 内置的命令行工具，专为 AI 智能体设计，无需启动 Dashboard，一条命令就能创建 API 令牌并获取 Base URL。
+
+```
+安装位置（macOS）：
+  /Applications/iModel.app/Contents/MacOS/imodel-cli
+
+安装位置（Windows）：
+  %ProgramFiles%\iModel\imodel-cli.exe
+
+安装位置（Linux）：
+  /usr/local/bin/imodel-cli
+```
+
+#### 三大核心功能
+
+| 命令     | 作用                    | 典型场景                                                     |
+| -------- | ----------------------- | ------------------------------------------------------------ |
+| `token`  | 创建/查询/删除 API 令牌 | 为 Claude Code、Hermes、Codex CLI 等 AI 工具配置 iModel 网关 |
+| `agent`  | Agent 授权管理          | 首次授权 AI 工具调用 CLI，建立白名单机制                     |
+| `config` | 本地 App 一键配置       | 自动检测并配置本地 App 使用 iModel 代理（支持 Claude Code、Cursor、Cline 等） |
+
+#### 快速开始：为 Hermes 配置 iModel
+
+```bash
+# ① 首次使用：授权 Hermes Agent
+imodel-cli agent authorize hermes --name "Hermes"
+
+# ② 创建 OpenAI 协议令牌（Hermes 使用 Chat Completions API）
+IMODEL_AGENT_ID=hermes imodel-cli token create openai \
+  --name "Hermes 令牌" \
+  --id hermes
+
+# ③ 查看创建的令牌详情
+IMODEL_AGENT_ID=hermes imodel-cli token get hermes
+
+# ④ 列出所有令牌
+IMODEL_AGENT_ID=hermes imodel-cli token list
+```
+
+> **输出结果**：创建成功后会返回 `api_key` 和 `base_url`，直接填入 Hermes 的环境变量即可：
+>
+> ```
+> OPENAI_API_KEY=mr-hermes-xxxxxxxxxxxx
+> OPENAI_BASE_URL=http://127.0.0.1:8788/v1/
+> ```
+
+#### 支持的协议类型
+
+| 协议        | 用途                    | 代理端点                    | 适用工具                      |
+| ----------- | ----------------------- | --------------------------- | ----------------------------- |
+| `anthropic` | Anthropic Messages API  | `POST /v1/messages`         | Claude Code、Claude Desktop   |
+| `openai`    | OpenAI Chat Completions | `POST /v1/chat/completions` | Hermes、GMOS、OpenAI 兼容工具 |
+| `responses` | OpenAI Responses API    | `POST /v1/responses`        | Codex CLI                     |
+
+#### 一键配置本地 App
+
+```bash
+# 查看支持配置的 App 列表
+imodel-cli config list
+
+# 自动配置 Claude Code
+imodel-cli config setup claude-code
+
+# 查看配置状态
+imodel-cli config status
+```
+
+> `config setup` 会自动检测 App 安装状态，创建令牌并修改配置文件，全程无需手动操作。
+
+#### 安全机制（三层保护）
+
+```
+  身份识别 ────▶ IMODEL_AGENT_ID 声明调用方身份
+      │
+  Agent 授权 ────▶ 首次使用需 agent authorize 加入白名单
+      │
+  iModel 登录 ────▶ 未登录时拒绝所有 CLI 操作
+```
+
+- **授权管理**：`agent list` 查看已授权列表，`agent revoke` 撤销授权
+- **删除保护**：删除令牌需要交互式终端确认，防止误删
+- **JSON 输出**：所有命令支持 `--json` 参数，便于 AI 工具解析
+
+#### AI 智能体集成示例
+
+```bash
+# 智能体自动获取令牌（JSON 格式，便于脚本解析）
+IMODEL_AGENT_ID=my-agent imodel-cli --json token create openai --name "My Agent"
+
+# 返回结构化 JSON：
+# {
+#   "api_key": "mr-my-agent-a1b2c3d4e5f6",
+#   "base_url": "http://127.0.0.1:8788/v1/",
+#   "protocol": "openai"
+# }
+```
+
+> **最佳实践**：每个 AI 应用使用独立的 Agent ID，便于审计和权限管理。
+
+<br>
+
 ---
 
 ## 四、谁在用
@@ -242,12 +345,12 @@ AI 对话中，历史消息越长，Token 消耗越大。爱魔豆的压缩引�
 
 | 平台          | 架构                | 下载链接                                                     |  大小  | 系统要求                  |
 | :------------ | :------------------ | :----------------------------------------------------------- | :----: | :------------------------ |
-| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-2.0.33-macOS-arm64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.33-macOS-arm64.pkg) | ~22 MB | macOS 13.x 或更高版本     |
-| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-2.0.33-macOS-x64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.33-macOS-x64.pkg) | ~36 MB | macOS 13.x 或更高版本     |
-| 🪟 **Windows** | X64                 | [下载 iModel-2.0.33-windows-x64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.33-windows-x64-setup.exe) | ~19 MB | Windows 10/11             |
-| 🪟 **Windows** | ARM                 | [下载 iModel-2.0.33-windows-arm64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.33-windows-arm64-setup.exe) | ~18 MB | Windows 10/11             |
-| 🐧 **Linux**   | X64                 | [下载 iModel-2.0.33-linux-x64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.33-linux-x64.tar.gz) | ~36 MB | Ubuntu 20.04+ / CentOS 7+ |
-| 🐧 **Linux**   | ARM64               | [下载 iModel-2.0.33-linux-arm64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-2.0.33-linux-arm64.tar.gz) | ~35 MB | Ubuntu 24.04 或更高版本   |
+| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-2.0.35-macOS-arm64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-2.0.35-macOS-arm64.pkg) | ~22 MB | macOS 13.x 或更高版本     |
+| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-2.0.35-macOS-x64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-2.0.35-macOS-x64.pkg) | ~36 MB | macOS 13.x 或更高版本     |
+| 🪟 **Windows** | X64                 | [下载 iModel-2.0.35-windows-x64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-2.0.35-windows-x64-setup.exe) | ~19 MB | Windows 10/11             |
+| 🪟 **Windows** | ARM                 | [下载 iModel-2.0.35-windows-arm64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-2.0.35-windows-arm64-setup.exe) | ~18 MB | Windows 10/11             |
+| 🐧 **Linux**   | X64                 | [下载 iModel-2.0.35-linux-x64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-2.0.35-linux-x64.tar.gz) | ~36 MB | Ubuntu 20.04+ / CentOS 7+ |
+| 🐧 **Linux**   | ARM64               | [下载 iModel-2.0.35-linux-arm64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-2.0.35-linux-arm64.tar.gz) | ~35 MB | Ubuntu 24.04 或更高版本   |
 
 ### 一键安装 — Pro 版
 
@@ -255,11 +358,11 @@ AI 对话中，历史消息越长，Token 消耗越大。爱魔豆的压缩引�
 
 | 平台          | 架构                | 下载链接                                                     |  大小   | 系统要求                  |
 | :------------ | :------------------ | :----------------------------------------------------------- | :-----: | :------------------------ |
-| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-Pro-2.0.33-macOS-arm64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.33-macOS-arm64.pkg) | ~261 MB | macOS 13.x 或更高版本     |
-| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-Pro-2.0.33-macOS-x64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.33-macOS-x64.pkg) | ~167 MB | macOS 13.x 或更高版本     |
-| 🪟 **Windows** | X64                 | [下载 iModel-Pro-2.0.33-windows-x64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.33-windows-x64-setup.exe) | ~200 MB | Windows 10/11             |
-| 🐧 **Linux**   | X64                 | [下载 iModel-Pro-2.0.33-linux-x64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.33-linux-x64.tar.gz) | ~372 MB | Ubuntu 20.04+ / CentOS 7+ |
-| 🐧 **Linux**   | ARM64               | [下载 iModel-Pro-2.0.33-linux-arm64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0/iModel-Pro-2.0.33-linux-arm64.tar.gz) | ~330 MB | Ubuntu 24.04 或更高版本   |
+| 🍎 **macOS**   | Apple Silicon (ARM) | [下载 iModel-Pro-2.0.35-macOS-arm64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-macOS-arm64.pkg) | ~271 MB | macOS 13.x 或更高版本     |
+| 🍎 **macOS**   | Intel (X64)         | [下载 iModel-Pro-2.0.35-macOS-x64.pkg](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-macOS-x64.pkg) | ~163 MB | macOS 13.x 或更高版本     |
+| 🪟 **Windows** | X64                 | [下载 iModel-Pro-2.0.35-windows-x64-setup.exe](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-windows-x64-setup.exe) | ~196 MB | Windows 10/11             |
+| 🐧 **Linux**   | X64                 | [下载 iModel-Pro-2.0.35-linux-x64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-linux-x64.tar.gz) | ~372 MB | Ubuntu 20.04+ / CentOS 7+ |
+| 🐧 **Linux**   | ARM64               | [下载 iModel-Pro-2.0.35-linux-arm64.tar.gz](https://github.com/keerlums/iModel/releases/download/v2.0.35/iModel-Pro-2.0.35-linux-arm64.tar.gz) | ~330 MB | Ubuntu 24.04 或更高版本   |
 
 ### 3 步上手
 
@@ -335,7 +438,7 @@ A：可以。按月订阅，随时取消，不扣违约金。
 
 <br>
 
-*版本 2.0.33 · 支持 macOS / Windows / Linux*
+*版本 2.0.35 · 支持 macOS / Windows / Linux*
 *如有任何问题，请发送邮件至 support@imodel.work*
 
 <br>
